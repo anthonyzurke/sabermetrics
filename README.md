@@ -52,7 +52,7 @@ Date | Assignment
 9/10 | [Part 2][part-2]
 9/22 | [Part 3][part-3]
 10/1 | [Part 4][part-4]
-10/8 | [Part 5][part-5]
+10/4 | [Part 5][part-5]
 
 <!--- LINKS --->
 
