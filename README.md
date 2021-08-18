@@ -48,11 +48,11 @@ These are all subject to change!
 
 Date | Assignment 
 -----| ----------
-6/2  | [Part 1][part-1]
-6/10 | [Part 2][part-2]
-6/24 | [Part 3][part-3]
-7/2  | [Part 4][part-4]
-7/7  | [Part 5][part-5]
+8/31 | [Part 1][part-1]
+9/10 | [Part 2][part-2]
+9/22 | [Part 3][part-3]
+10/1 | [Part 4][part-4]
+10/8 | [Part 5][part-5]
 
 <!--- LINKS --->
 
