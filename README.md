@@ -5,9 +5,109 @@ The Capstone Project is divided into 5 deliverables, each building on top of ski
 
 ### **[Capstone, Part 1: Pitch + Problem Statement][part-1]**
 
-Pitch us on potential ideas for a data-driven project. Think of topics you’re passionate about, knowledge you’re familiar with, or problems relevant to to industries you’d like to work with. What questions do you want to answer?
-- **Requirements:** Lightning talk with 2-3 topics, including a problem statement, potential audience, goals, and success metrics, as well as possible data sources for each. Remember, if you can’t find data, you can’t do your project
-- **Format:** Slide deck
+|Feature          |Type     |Dataset                     |Description                       |
+|---              |---      |---                         |---                               |
+|age              |int64    |mlb_pitch_stats_19_21, 20   |players's age                     |
+|edge%            |float64  |mlb_pitch_stats_19_21, 20   |edge of zone percentage           |
+|poor_weak%       |float64  |mlb_pitch_stats_19_21, 20   |poor/weak contact percentage      |
+|4seam%           |float64  |mlb_pitch_stats_19_21, 20   |4seam fastball percentage thrown  |
+|4seam_velo       |float64  |mlb_pitch_stats_19_21, 20   |avgerage 4seam velocity           |
+|ch%              |float64  |mlb_pitch_stats_19_21, 20   |changeup percentage thrown        |
+|sl%              |float64  |mlb_pitch_stats_19_21, 20   |slider percentage thrown          |
+|cb%              |float64  |mlb_pitch_stats_19_21, 20   |curveball percentage thrown       |
+|cu%              |float64  |mlb_pitch_stats_19_21, 20   |cutter percentage thrown          |
+|throws           |object   |mlb_pitch_stats_19_21, 20   |handedness RHP: 1, LHP: 0         |
+
+|Feature          |Type     |Dataset                     |Description                |
+|---              |---      |---                         |---                        |
+|player_id        |int64    |mlb_pitch_stats_19_21, 20   |player ID                  |
+|last_name        |object   |mlb_pitch_stats_19_21, 20   |player last name           |
+|first_name       |object   |mlb_pitch_stats_19_21, 20   |player first name          |
+|year             |int64    |mlb_pitch_stats_19_21, 20   |season                     |
+|age              |int64    |mlb_pitch_stats_19_21, 20   |players's age              |
+|ip               |float64  |mlb_pitch_stats_19_21, 20   |number of innings pitched  |
+|bf               |int64    |mlb_pitch_stats_19_21, 20   |number of innings pitched  |
+|ab               |int64    |mlb_pitch_stats_19_21, 20   |number of innings pitched  |
+|h                |int64    |mlb_pitch_stats_19_21, 20   |hits given up  |
+|k%               |float64  |mlb_pitch_stats_19_21, 20   |strikeout percentage       |
+|bb%              |float64  |mlb_pitch_stats_19_21, 20   |walk percentage            |
+|ba               |float64  |mlb_pitch_stats_19_21, 20   |batting average against    |
+|slg%             |float64  |mlb_pitch_stats_19_21, 20   |slugging percentage against       |
+|obp%             |float64  |mlb_pitch_stats_19_21, 20   |on base percentage         |
+|ops              |float64  |mlb_pitch_stats_19_21, 20   |on base plus slugging against  |
+|earned_runs      |int64    |mlb_pitch_stats_19_21, 20   |earned runs   |
+|era              |float64  |mlb_pitch_stats_19_21, 20   |earned run average  |
+|qual_start       |int64    |mlb_pitch_stats_19_21, 20   |quality start (>= 6 ip <= 3 runs) |
+|cg               |int64    |mlb_pitch_stats_19_21, 20   |complete game  |
+|xba              |float64  |mlb_pitch_stats_19_21, 20   |expected ba (probability a batted ball will be a hit) |
+|xslg             |float64  |mlb_pitch_stats_19_21, 20   |expected slugging percentage  |
+|woba             |float64  |mlb_pitch_stats_19_21, 20   |weighted on-base average  |
+|xwoba            |float64  |mlb_pitch_stats_19_21, 20   |expected weighted on-base average |
+|xobp             |float64  |mlb_pitch_stats_19_21, 20   |expected on-base percentage  |
+|wobacon          |float64  |mlb_pitch_stats_19_21, 20   |  |
+|xwobacon         |float64  |mlb_pitch_stats_19_21, 20   |  |
+|bacon            |float64  |mlb_pitch_stats_19_21, 20   |batting avgerage on contact  |
+|xbacon           |float64  |mlb_pitch_stats_19_21, 20   |expected batting avgerage on contact   |
+|ev_avg           |float64  |mlb_pitch_stats_19_21, 20   |average exit velocity   |
+|la_avg           |float64  |mlb_pitch_stats_19_21, 20   |average LA (how high, in degrees, a ball was hit) |
+|sweet_spot%      |float64  |mlb_pitch_stats_19_21, 20   |batted ball with la between 8 and 32 degrees  |
+|barrel%          |float64  |mlb_pitch_stats_19_21, 20   |perfect combination of exit velocity and launch angle |
+|solid_contact%   |float64  |mlb_pitch_stats_19_21, 20   |solid contact percentage  |
+|poor_weak%       |float64  |mlb_pitch_stats_19_21, 20   |poor/weak contact percentage  |
+|hard_hit%        |float64  |mlb_pitch_stats_19_21, 20   |exit velo > 95 mph hard hit ball percentage     |
+|z_swing%         |float64  |mlb_pitch_stats_19_21, 20   |in-zone swing percentage  |
+|z_swing_miss%    |float64  |mlb_pitch_stats_19_21, 20   |in-zone swing and miss percentage  |
+|oz_swing%        |float64  |mlb_pitch_stats_19_21, 20   |out-zone swing percentage  |
+|oz_swing_miss%   |float64  |mlb_pitch_stats_19_21, 20   |out-zone swing and miss percentage   |
+|oz_contact%      |float64  |mlb_pitch_stats_19_21, 20   |out-zone contact percentage  |
+|out_zone%        |float64  |mlb_pitch_stats_19_21, 20   |out_zone percentage  |
+|pitch_count      |int64    |mlb_pitch_stats_19_21, 20   |pitch count   |
+|z_contact%       |float64  |mlb_pitch_stats_19_21, 20   |in-zone contact percentage   |
+|in_zone%         |float64  |mlb_pitch_stats_19_21, 20   |in-zone percentage  |
+|edge%            |float64  |mlb_pitch_stats_19_21, 20   |edge of zone percentage  |
+|whiff%           |float64  |mlb_pitch_stats_19_21, 20   |whiff percentage   |
+|swing%           |float64  |mlb_pitch_stats_19_21, 20   |swing percentage   |
+|gb%              |float64  |mlb_pitch_stats_19_21, 20   |ground ball percentage  |
+|fb%              |float64  |mlb_pitch_stats_19_21, 20   |fly ball percentage   |
+|ld%              |float64  |mlb_pitch_stats_19_21, 20   |line drive percentage   |
+|po%              |float64  |mlb_pitch_stats_19_21, 20   |popup percentage   |
+|throws           |object   |mlb_pitch_stats_19_21, 20   |handedness RHP: 1, LHP: 0               |
+|n_pitches        |int64    |mlb_pitch_stats_19_21, 20   |number of pitches thrown        |
+|4seam%           |float64  |mlb_pitch_stats_19_21, 20   |4seam fastball percentage thrown       |
+|4seam_velo       |float64  |mlb_pitch_stats_19_21, 20   |avgerage 4seam velocity       |
+|4seam_spinrate   |float64  |mlb_pitch_stats_19_21, 20   |avgerage 4seam spinrate       |
+|4seam_hb         |float64  |mlb_pitch_stats_19_21, 20   |avgerage 4seam horizontal break        |
+|4seam_vb         |float64  |mlb_pitch_stats_19_21, 20   |avgerage 4seam vertical break        |
+|4seam_brk        |float64  |mlb_pitch_stats_19_21, 20   |avgerage 4seam total break        |
+|4seam_velo_range |float64  |mlb_pitch_stats_19_21, 20   |4seam velocity range       |
+|sl%              |float64  |mlb_pitch_stats_19_21, 20   |slider percentage thrown      |
+|sl_velo          |float64  |mlb_pitch_stats_19_21, 20   |avgerage sl velocity       |
+|sl_spinrate      |float64  |mlb_pitch_stats_19_21, 20   |avgerage sl spinrate         |
+|sl_hb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage sl horizontal break       |
+|sl_vb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage sl vertical break        |
+|sl_brk           |float64  |mlb_pitch_stats_19_21, 20   |avgerage sl total break       |
+|sl_velo_range    |float64  |mlb_pitch_stats_19_21, 20   |sl velocity range       |
+|ch%              |float64  |mlb_pitch_stats_19_21, 20   |changeup percentage thrown        |
+|ch_velo          |float64  |mlb_pitch_stats_19_21, 20   |avgerage ch velocity       |
+|ch_spinrate      |float64  |mlb_pitch_stats_19_21, 20   |avgerage ch spinrate       |
+|ch_hb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage ch horizontal break       |
+|ch_vb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage ch vertical break        |
+|ch_brk           |float64  |mlb_pitch_stats_19_21, 20   |avgerage ch total break       |
+|ch_velo_range    |float64  |mlb_pitch_stats_19_21, 20   |ch velocity range       |
+|cb%              |float64  |mlb_pitch_stats_19_21, 20   |curveball percentage thrown       |
+|cb_velo          |float64  |mlb_pitch_stats_19_21, 20   |avgerage cb velocity       |
+|cb_spinrate      |float64  |mlb_pitch_stats_19_21, 20   |avgerage cb spinrate       |
+|cb_hb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage cb horizontal break        |
+|cb_vb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage cb vertical break        |
+|cb_brk           |float64  |mlb_pitch_stats_19_21, 20   |avgerage cb total break         |
+|cb_velo_range    |float64  |mlb_pitch_stats_19_21, 20   |cb velocity range       |
+|cu%              |float64  |mlb_pitch_stats_19_21, 20   |cutter percentage thrown       |
+|cu_velo          |float64  |mlb_pitch_stats_19_21, 20   |avgerage cu velocity       |
+|cu_spinrate      |float64  |mlb_pitch_stats_19_21, 20   |avgerage cu spinrate        |
+|cu_hb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage cu horizontal break        |
+|cu_vb            |float64  |mlb_pitch_stats_19_21, 20   |avgerage cu vertical break        |
+|cu_brk           |float64  |mlb_pitch_stats_19_21, 20   |avgerage cu total break        |
+|cu_velo_range    |float64  |mlb_pitch_stats_19_21, 20   |cu velocity range       |
 
 
 ### **[Capstone, Part 2: Dataset + Data Collection][part-2]**
